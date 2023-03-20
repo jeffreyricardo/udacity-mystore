@@ -1,0 +1,30 @@
+<mat-card class="product-card">
+
+    <div class="center">
+        <mat-card-title>{{product.name}}</mat-card-title>
+    </div>
+
+    <a routerLink="/products/{{product.id}}"><img mat-card-image src="{{product.url}}"/></a>
+    <mat-card-content>
+
+        <div class="center">${{product.price}}</div>
+        <div class="center">{{product.description}}</div>
+
+        <div class="center">
+            <mat-card-actions>
+
+                <form (ngSubmit)="addToCart()">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Quantity</mat-label>
+                        <mat-select [(ngModel)]="quantity" name="{{product.id}}">
+                        <mat-option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [value]="i">{{i}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <p class="custom-spacing"><button mat-raised-button color="primary" type="submit">Add to Cart</button></p>
+                </form>
+            </mat-card-actions>
+        </div>
+    </mat-card-content>
+    
+</mat-card>

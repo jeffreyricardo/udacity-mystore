@@ -1,0 +1,9 @@
+img {
+    border-radius: 10px;
+    width: 320px;
+}
+
+p.thick {
+    font-weight: bold;
+    font-size: large;
+}

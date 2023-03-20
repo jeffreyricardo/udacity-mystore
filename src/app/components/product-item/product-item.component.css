@@ -1,0 +1,27 @@
+.product-card {
+    width: 330px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+.wrapper {
+    padding: 1rem;
+    display: inline-block;
+}
+.custom-spacing {
+    padding: 5px
+}
+p {
+    max-height: min-content;
+}
+img {
+    width: 288px;
+    height: 346px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.item {
+    order: 0;
+  }

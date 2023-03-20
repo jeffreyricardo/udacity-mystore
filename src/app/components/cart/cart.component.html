@@ -1,0 +1,46 @@
+<div class="cart-container">
+    <div class="cart-panel">
+      <div class="cart-item" *ngFor="let cartItem of cart">
+        <img class="product-image" src="{{cartItem.product.url}}"/>
+        <div class="cart-item-details">
+          <p style="font-size: large; font-weight: bold;">{{cartItem.product.name}}</p>
+          <p>${{cartItem.product.price}}</p>
+          <div>
+            <label>Quantity: </label>
+            <input class="number-input" type="number" value="{{cartItem.quantity}}" min="0" max="10" [(ngModel)]="cartItem.quantity" (ngModelChange)="updateQuantity(cartItem)"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size: x-large; font-weight: bold;">Total Price: ${{totalPrice.toFixed(2)}}</p>
+      </div>
+    </div>
+
+    <div class="cart-panel">
+      <form #form="ngForm" (ngSubmit)="submitOrder()">
+        <div>
+          <p>
+            Full Name<br/>
+            <input type="text" name="name" required placeholder="(minimum 3 characters)" minlength="3" [(ngModel)]="name"/>
+          </p>
+          <p>
+            Address<br/>
+            <input type="text" name="address" required placeholder="(minimum 6 characters)" minlength="6" [(ngModel)]="address"/>
+          </p>
+          <p>
+            Credit Card<br/>
+            <input type="text" name="creditcard" required placeholder="(16 digit number)" minlength="16" maxlength="16" pattern="\d{16}" [(ngModel)]="creditCard"/>
+          </p>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Place Order</button>
+        </div>        
+      </form>
+    </div>
+</div>
+
+<div class="empty-cart-message" *ngIf="cart.length == 0">
+  <h2>Cart empty.  Please return to <a routerLink="/products">Product List</a></h2>
+</div>
+
+
