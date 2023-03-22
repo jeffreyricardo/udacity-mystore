@@ -11,8 +11,27 @@ This application includes the following features to simulate an end user making 
 - **Checkout Form**, which collects information about the user (e.g., name, address, payment details, etc.)
 - **Order Confirmation**, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form)
 
-Product data is fetched via data.json (locally), however, code utilizes HttpClient.get() so that retrieval via external API is easily configurable.
+## Technology Architecture
 
+**Components**
+- Cart
+- Nav Bar
+- Order Confirmation
+- Product Item
+- Product Item Detail
+- Product List
+
+**Models**
+- Cart Item
+- Product
+- Order
+
+**Services**
+- Cart Service
+- Order Service
+- Product Service
+
+Product data is fetched via data.json (locally), however, code utilizes HttpClient.get() so that retrieval via external API is easily configurable.
 
 
 ## Development server
