@@ -34,6 +34,7 @@ export class CartComponent {
     if (cartItem.quantity == 0) {
       this.cart = this.cart.filter((testItem) => testItem.product.id != cartItem.product.id);
       this.cartService.setCart(this.cart);
+      alert('Item removed from cart.');
     }
     this.totalPrice = this.cartService.getTotalPrice();
   }
