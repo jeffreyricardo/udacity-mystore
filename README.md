@@ -2,7 +2,7 @@
 
 This project is a full single-page representation of an ecommerce application, built with Angular.  
 
-Scaffolding for this project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.  
+Scaffolding for this project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.  
 
 This application includes the following features to simulate an end user making a purchase via website:
 - **Product List**, which displays the available products for the user to choose and add to their cart (in various quantities)
